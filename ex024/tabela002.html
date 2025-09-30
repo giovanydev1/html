@@ -10,8 +10,9 @@
         }
 
         table{
-            width: 350px;
+            width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td,th{
@@ -19,14 +20,32 @@
             padding: 10px;
         }
 
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+            border: 1px solid black;
+            border-bottom: none;
+        }
+
         thead, tfoot{
-            background-color: gray;
+            background-color: rgb(56, 56, 56);
             color: white;
+        }
+
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: rgb(56, 56, 56);
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: lightgray;
         }
 
         td.num{
             text-align: right;
-            width: 100px;
         }
 
 
@@ -37,10 +56,11 @@
     <table>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
+        <caption>População das Unidades Federativas</caption>
         <tbody>
             <tr>
                 <td>São Paulo</td>
@@ -153,7 +173,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
+                <th scope="row">Total de habitantes</th>
                 <td class="num"><strong>210 147 125</strong></td>
             </tr>
         </tfoot>
