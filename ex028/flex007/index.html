@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.container{
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            height: 400px;
+        }
+
+        div.item{
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+            flex: 0 1 auto /*ou initial, 0 0 auto ou none (nada flexivel), 1 1 auto ou auto, mais flexibilidade. colocando só um numero é como declarar o grow e o resto é padronizado*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B</div>
+        <div class="item" id="i3">C</div>
+        <div class="item" id="i4">D</div>
+        <div class="item" id="i5">E</div>
+        <div class="item" id="i6">F</div>
+        <div class="item" id="i7">G</div>
+    </div> 
+</body>
+</html>
